@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var reserveButton: UIButton!
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        //Center button text in Reservation Button
+        reserveButton.titleLabel?.textAlignment = NSTextAlignment.center
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +31,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
 
 }
