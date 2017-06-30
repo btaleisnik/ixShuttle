@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30606FF91F06598C003DA983 /* iX_Schedule.png in Resources */ = {isa = PBXBuildFile; fileRef = 30606FF81F06598C003DA983 /* iX_Schedule.png */; };
+		30606FFB1F065D29003DA983 /* CapeTown_map.png in Resources */ = {isa = PBXBuildFile; fileRef = 30606FFA1F065D29003DA983 /* CapeTown_map.png */; };
 		CA0B26631F055003006F0CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0B26621F055003006F0CF7 /* AppDelegate.swift */; };
 		CA0B26651F055003006F0CF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0B26641F055003006F0CF7 /* ViewController.swift */; };
 		CA0B26681F055003006F0CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0B26661F055003006F0CF7 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30606FF81F06598C003DA983 /* iX_Schedule.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iX_Schedule.png; path = ../../../../iX_Schedule.png; sourceTree = "<group>"; };
+		30606FFA1F065D29003DA983 /* CapeTown_map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CapeTown_map.png; path = ../../../../CapeTown_map.png; sourceTree = "<group>"; };
 		CA0B265F1F055003006F0CF7 /* ixShuttle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ixShuttle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0B26621F055003006F0CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA0B26641F055003006F0CF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				CA0B26621F055003006F0CF7 /* AppDelegate.swift */,
 				CA0B26641F055003006F0CF7 /* ViewController.swift */,
 				CA0B26661F055003006F0CF7 /* Main.storyboard */,
+				30606FFA1F065D29003DA983 /* CapeTown_map.png */,
+				30606FF81F06598C003DA983 /* iX_Schedule.png */,
 				CA0B26691F055003006F0CF7 /* Assets.xcassets */,
 				CA0B266B1F055003006F0CF7 /* LaunchScreen.storyboard */,
 				CA0B266E1F055003006F0CF7 /* Info.plist */,
@@ -123,9 +129,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30606FFB1F065D29003DA983 /* CapeTown_map.png in Resources */,
 				CA0B266D1F055003006F0CF7 /* LaunchScreen.storyboard in Resources */,
 				CA0B266A1F055003006F0CF7 /* Assets.xcassets in Resources */,
 				CA0B26681F055003006F0CF7 /* Main.storyboard in Resources */,
+				30606FF91F06598C003DA983 /* iX_Schedule.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +309,7 @@
 				CA0B26731F055003006F0CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
