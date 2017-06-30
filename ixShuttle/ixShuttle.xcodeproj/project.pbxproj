@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0849E861F06703600F8D8D7 /* ShuttleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0849E851F06703600F8D8D7 /* ShuttleViewController.swift */; };
 		CA0B26631F055003006F0CF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0B26621F055003006F0CF7 /* AppDelegate.swift */; };
 		CA0B26651F055003006F0CF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0B26641F055003006F0CF7 /* ViewController.swift */; };
 		CA0B26681F055003006F0CF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA0B26661F055003006F0CF7 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A0849E851F06703600F8D8D7 /* ShuttleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuttleViewController.swift; sourceTree = "<group>"; };
 		CA0B265F1F055003006F0CF7 /* ixShuttle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ixShuttle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0B26621F055003006F0CF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA0B26641F055003006F0CF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				CA0B26621F055003006F0CF7 /* AppDelegate.swift */,
 				CA0B26641F055003006F0CF7 /* ViewController.swift */,
+				A0849E851F06703600F8D8D7 /* ShuttleViewController.swift */,
 				CA0B26661F055003006F0CF7 /* Main.storyboard */,
 				CA0B26691F055003006F0CF7 /* Assets.xcassets */,
 				CA0B266B1F055003006F0CF7 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0849E861F06703600F8D8D7 /* ShuttleViewController.swift in Sources */,
 				CA0B26651F055003006F0CF7 /* ViewController.swift in Sources */,
 				CA0B26631F055003006F0CF7 /* AppDelegate.swift in Sources */,
 			);

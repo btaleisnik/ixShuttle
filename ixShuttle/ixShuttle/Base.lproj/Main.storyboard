@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,11 +31,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="ajk-E9-sdD">
             <objects>
-                <viewController title="Schedule" id="SCc-at-XYZ" sceneMemberID="viewController">
+                <viewController title="Schedule" id="SCc-at-XYZ" customClass="ShuttleViewController" customModule="ixShuttle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nAZ-Vu-jGH"/>
                         <viewControllerLayoutGuide type="bottom" id="SQs-92-Sbo"/>
@@ -44,12 +46,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iX_Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="bbs-62-apS">
-                                <rect key="frame" x="0.0" y="64" width="375" height="464"/>
+                                <rect key="frame" x="0.0" y="262" width="375" height="464"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwe-Vh-Bv0">
+                                <rect key="frame" x="41" y="92" width="88" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.4278790509" blue="0.80369284630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose your destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xf9-QD-O1E">
+                                <rect key="frame" x="158" y="92" width="190" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SCc-at-XYZ" id="zYB-2C-wIA"/>
+                                </connections>
+                            </textField>
+                            <pickerView hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-p7-icc">
+                                <rect key="frame" x="164" y="126" width="172" height="128"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SCc-at-XYZ" id="eQg-nT-MPf"/>
+                                    <outlet property="delegate" destination="SCc-at-XYZ" id="INm-SP-hjQ"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xf9-QD-O1E" secondAttribute="trailing" constant="11" id="4Kd-CH-beb"/>
+                            <constraint firstItem="Kwe-Vh-Bv0" firstAttribute="top" secondItem="nAZ-Vu-jGH" secondAttribute="bottom" constant="28" id="93J-uz-8i0"/>
+                            <constraint firstItem="xf9-QD-O1E" firstAttribute="top" secondItem="nAZ-Vu-jGH" secondAttribute="bottom" constant="28" id="FP0-HE-3ap"/>
+                            <constraint firstItem="NT6-p7-icc" firstAttribute="top" secondItem="xf9-QD-O1E" secondAttribute="bottom" constant="4" id="Gja-Il-wP3"/>
+                            <constraint firstItem="Kwe-Vh-Bv0" firstAttribute="leading" secondItem="jdg-Vt-E5r" secondAttribute="leadingMargin" constant="25" id="MWo-lx-ffS"/>
+                            <constraint firstItem="xf9-QD-O1E" firstAttribute="leading" secondItem="Kwe-Vh-Bv0" secondAttribute="trailing" constant="29" id="bgd-l4-TZt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="destination" destination="xf9-QD-O1E" id="mm5-xY-F3c"/>
+                        <outlet property="dropdownoptions" destination="NT6-p7-icc" id="fhQ-pH-mRo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvS-bN-jfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
