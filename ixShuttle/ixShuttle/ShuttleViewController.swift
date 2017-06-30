@@ -38,6 +38,11 @@ class ShuttleViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.dropdownoptions.isHidden = true
+        
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.dropdownoptions.isHidden = false
     }
