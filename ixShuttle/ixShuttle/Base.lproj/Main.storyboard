@@ -126,7 +126,7 @@
         <!--Schedule-->
         <scene sceneID="ajk-E9-sdD">
             <objects>
-                <viewController title="Schedule" id="SCc-at-XYZ" sceneMemberID="viewController">
+                <viewController title="Schedule" id="SCc-at-XYZ" customClass="ShuttleViewController" customModule="ixShuttle" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nAZ-Vu-jGH"/>
                         <viewControllerLayoutGuide type="bottom" id="SQs-92-Sbo"/>
@@ -134,12 +134,53 @@
                     <view key="view" contentMode="scaleToFill" id="jdg-Vt-E5r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwe-Vh-Bv0">
+                                <rect key="frame" x="41" y="92" width="88" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.4278790509" blue="0.80369284630000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose your destination" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xf9-QD-O1E">
+                                <rect key="frame" x="158" y="92" width="190" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="SCc-at-XYZ" id="zYB-2C-wIA"/>
+                                </connections>
+                            </textField>
+                            <pickerView hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NT6-p7-icc">
+                                <rect key="frame" x="164" y="126" width="172" height="128"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SCc-at-XYZ" id="eQg-nT-MPf"/>
+                                    <outlet property="delegate" destination="SCc-at-XYZ" id="INm-SP-hjQ"/>
+                                </connections>
+                            </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iX_Schedule" translatesAutoresizingMaskIntoConstraints="NO" id="bbs-62-apS">
+                                <rect key="frame" x="0.0" y="183" width="375" height="464"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xf9-QD-O1E" secondAttribute="trailing" constant="11" id="4Kd-CH-beb"/>
+                            <constraint firstItem="Kwe-Vh-Bv0" firstAttribute="top" secondItem="nAZ-Vu-jGH" secondAttribute="bottom" constant="28" id="93J-uz-8i0"/>
+                            <constraint firstItem="xf9-QD-O1E" firstAttribute="top" secondItem="nAZ-Vu-jGH" secondAttribute="bottom" constant="28" id="FP0-HE-3ap"/>
+                            <constraint firstItem="NT6-p7-icc" firstAttribute="top" secondItem="xf9-QD-O1E" secondAttribute="bottom" constant="4" id="Gja-Il-wP3"/>
+                            <constraint firstItem="Kwe-Vh-Bv0" firstAttribute="leading" secondItem="jdg-Vt-E5r" secondAttribute="leadingMargin" constant="25" id="MWo-lx-ffS"/>
+                            <constraint firstItem="xf9-QD-O1E" firstAttribute="leading" secondItem="Kwe-Vh-Bv0" secondAttribute="trailing" constant="29" id="bgd-l4-TZt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="destination" destination="xf9-QD-O1E" id="mm5-xY-F3c"/>
+                        <outlet property="dropdownoptions" destination="NT6-p7-icc" id="fhQ-pH-mRo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvS-bN-jfV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272" y="334"/>
+            <point key="canvasLocation" x="1271.2" y="333.28335832083962"/>
         </scene>
         <!--Map -->
         <scene sceneID="djh-6q-mux">
@@ -152,12 +193,30 @@
                     <view key="view" contentMode="scaleToFill" id="KIs-K0-1cI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CapeTown_map" translatesAutoresizingMaskIntoConstraints="NO" id="szU-V4-cV9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="483"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bus" translatesAutoresizingMaskIntoConstraints="NO" id="bgH-m9-ig1">
+                                <rect key="frame" x="62" y="239" width="64" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bus" translatesAutoresizingMaskIntoConstraints="NO" id="Jo8-Pm-5nR">
+                                <rect key="frame" x="95" y="170" width="64" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Bus" translatesAutoresizingMaskIntoConstraints="NO" id="yK3-kB-Yfq">
+                                <rect key="frame" x="174" y="189" width="64" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6N-cu-odD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272" y="-398"/>
+            <point key="canvasLocation" x="1271.2" y="-398.05097451274366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RJb-wt-8VA">
@@ -327,5 +386,8 @@
         <image name="bus3" width="32" height="32"/>
         <image name="capeTownCommute" width="1920" height="1080"/>
         <image name="right-arrow (1)" width="32" height="32"/>
+        <image name="Bus" width="24" height="24"/>
+        <image name="CapeTown_map" width="584" height="702"/>
+        <image name="iX_Schedule" width="714" height="736"/>
     </resources>
 </document>
